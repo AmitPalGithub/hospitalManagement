@@ -3,6 +3,7 @@ package com.futureinnovation.hospitalManagement.service;
 
 import com.futureinnovation.hospitalManagement.entity.Patient;
 import com.futureinnovation.hospitalManagement.repository.PatientRepository;
+import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ public class PatientService {
     private final PatientRepository patientRepository;
 
 
+//    private  final EntityManager entityManager;
 
 
     @Transactional
@@ -23,7 +25,8 @@ public class PatientService {
 
         Patient p2 = patientRepository.findById(id).orElseThrow();
 
-        System.out.println(p1==p2);
+//        System.out.println(p1==p2);
+//        p1.setName("Yoyo");
 
         return p1;
     }
