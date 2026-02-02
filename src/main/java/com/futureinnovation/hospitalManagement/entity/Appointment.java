@@ -4,6 +4,8 @@ package com.futureinnovation.hospitalManagement.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
@@ -18,7 +20,7 @@ public class Appointment {
     private int id;
 
     @Column(nullable = false)
-    private String appointmentTime;
+    private LocalDateTime appointmentTime;
 
     @Column(length = 500)
     private String reason;
@@ -26,4 +28,8 @@ public class Appointment {
     @ManyToOne
     @JoinColumn(name = "patient_id", nullable = false)  // patient is required and not nullable
     private Patient patient;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Doctor doctor;
 }

@@ -14,9 +14,7 @@ public class PatientService {
 
     private final PatientRepository patientRepository;
 
-
 //    private  final EntityManager entityManager;
-
 
     @Transactional
     public Patient getPatientById(Long id){

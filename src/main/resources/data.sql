@@ -6,3 +6,8 @@ INSERT INTO patient (name, gender, birth_date, email, blood_group) values
     ('Surya Das', 'MALE', '1988-03-10', 'surya.das@gmail.com', 'A_POSITIVE');
 
 
+insert into doctor (name, specialization, email)
+values
+    ('Dr. Rakesh Singh', 'Dermatology', 'rakesh.singh@gmail.com'),
+    ('Dr. Rohit Sharma', 'Cardiology', 'rohit.sharma.gmail.com'),
+    ('Dr. Sneha Kapoor', 'ENT', 'sneha.kapoor@gmail.com');
